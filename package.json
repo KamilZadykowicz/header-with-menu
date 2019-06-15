@@ -1,0 +1,42 @@
+{
+  "name": "header-with-menu",
+  "version": "1.0.0",
+  "description": "Header with menu project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KamilZadykowicz/header-with-menu.git"
+  },
+  "author": "Kamil Zadykowicz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KamilZadykowicz/header-with-menu/issues"
+  },
+  "homepage": "https://github.com/KamilZadykowicz/header-with-menu#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^4.1.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-changed": "^4.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "not dead"
+  ]
+}
