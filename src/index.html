@@ -15,27 +15,30 @@
         <div class="topBar__wrapper">
             <div class="container">
                 <div class="topBar">
-                    <div class="topBar__side">
-                        <a class="topBar__link" href="tel:293939098">293 939 098</a>
-                        <a class="topBar__link" href="kontakt@aurorabox.pl">kontakt@aurorabox.pl</a>
+                    <div class="topBar__side topBar__side--contact">
+                        <a class="topBar__link topBar__link--tel" href="tel:293939098">293 939 098</a>
+                        <a class="topBar__link topBar__link--mail" href="kontakt@aurorabox.pl">kontakt@aurorabox.pl</a>
                     </div>
-                    <div class="topBar__side">
-                        <a class="topBar__link" href="#">Zaloguj się</a>
-                        <a class="topBar__link" href="#">Załóż konto</a>
+                    <div class="topBar__side topBar__side--account">
+                        <a class="topBar__link topBar__link--login" href="#">Zaloguj się</a>
+                        <a class="topBar__link topBar__link--register" href="#">Załóż konto</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container">
-            <div>
-                <img src="./img/logo.png" alt="logo sklepu">
-                <input type="text">
-                <div>
-                    <img src="./img/basket.png" alt="koszyk">
-                    <p>Twój koszyk</p>
+            <div class="headerbar">
+                <img class="headerbar__logo" src="./img/logo.png" alt="logo sklepu">
+                <input class="headerbar__input" placeholder="Co chcesz kupić?" type="text">
+                <div class="basket__wrap">
+                    <div class="basket">
+                        <img class="basket__img" src="./img/basket.png" alt="koszyk">
+                        <span class="basket__qty">2</span>
+                    </div>
+                    <p class="basket__text bold">Twój koszyk</p>
                 </div>
             </div>
-            <nav class="navigation">
+            <nav class="navigation" id="navigation">
                 <ul class="navigation__list">
                     <li>KATEGORIE</li>
                     <li>NOWOŚCI</li>

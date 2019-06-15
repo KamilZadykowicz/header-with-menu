@@ -1,0 +1,97 @@
+.headerbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 20px;
+    &__logo {
+        width: 20%;
+        flex-shrink: 0;
+        @include respond(phone-land) {
+            width: 100px;
+        }
+        @include respond(tab-port) {
+            width: 130px;
+        }
+        @include respond(tab-land) {
+            width: 150px;
+        }
+    }
+    &__input {
+        width: 150px;
+        border: none;
+        border-bottom: 1px solid #191919;
+        font-size: 12px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 25px;
+        &::placeholder {
+            color: #a3a2a2;
+        }
+        @include respond(phone-port) {
+            width: 200px;
+        }
+        @include respond(phone-land) {
+            width: 300px;
+        }
+        @include respond(tab-port) {
+            width: 400px;
+        }
+        @include respond(tab-land) {
+            width: 480px;
+            margin-left: 100px;
+        }
+    }
+}
+
+.basket {
+    margin-right: 4px;
+    position: relative;
+    &__wrap {
+        display: flex;
+        align-items: flex-start;
+    }
+    &__img {
+        width: 20px;
+        @include respond(phone-land) {
+            width: 22px;
+        }
+        @include respond(tab-land) {
+            width: 25px;
+        }
+    }
+    &__text {
+        font-size: 10px;
+        @include respond(phone-land) {
+            font-size: 12px;
+        }
+        @include respond(tab-land) {
+            font-size: 14px;
+        }
+    }
+    &__qty {
+        width: 16px;
+        height: 16px;
+        font-size: 8px;
+        font-weight: 700;
+        color: #FFFFFF;
+        background-color: #ecc7d0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        position: absolute;
+        right: -5px;
+        bottom: -5px;
+        @include respond(phone-land) {
+            font-size: 10px;
+            width: 18px;
+            height: 18px;
+        }
+        @include respond(tab-land) {
+            font-size: 12px;
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
