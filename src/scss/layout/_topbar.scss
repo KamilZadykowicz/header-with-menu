@@ -1,0 +1,32 @@
+.topBar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    &__wrapper {
+        border-bottom: 1px solid $color-borders;
+    }
+    &__side {
+        &:nth-last-of-type(1) {
+            .topBar__link {
+                padding-left: 10px;
+                padding-right: 10px;
+                border-left: 1px solid $color-borders;
+                border-right: 1px solid $color-borders;
+                &:nth-of-type(1) {
+                    border-bottom: 1px solid $color-borders;
+                }
+            }
+        }
+    }
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: $color-black;
+        font-size: 10px;
+        padding: 10px 0;
+
+        // &:nth-of-type(1) {
+        //     margin-right: 5px;
+        // }
+    }
+}

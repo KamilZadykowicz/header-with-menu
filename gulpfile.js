@@ -12,6 +12,8 @@ const htmlReplace = require('gulp-html-replace');
 const htmlMin = require('gulp-htmlmin');
 const del = require('del');
 
+const server = browserSync.create();
+
 const config = {
     dist: 'dist',
     src: 'src',
@@ -38,19 +40,25 @@ gulp.task('sass', () => {
     .pipe(autoprefixer())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.scssout))
-    .pipe(browserSync.stream());
+    // .pipe(gulp.series('reload'));
+    .pipe(server.stream());
 });
 
-gulp.task('reload', function() {
-    browserSync.reload();
+gulp.task('reload', (done) => {
+    server.reload();
+    done();
 });
 
 gulp.task('serve', gulp.series('sass', () => {
-    browserSync({
+    // browserSync({
+    //     server: config.src
+    // });
+    server.init({
         server: config.src
     });
 
-    gulp.watch([config.htmlin, config.jsin], gulp.series('reload'));
+    gulp.watch(config.htmlin, gulp.series('reload'));
+    gulp.watch(config.jsin, gulp.series('reload'));
     gulp.watch(config.scssin, gulp.series('sass'));
 }));
 
