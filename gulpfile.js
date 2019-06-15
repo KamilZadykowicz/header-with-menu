@@ -19,7 +19,7 @@ const config = {
     src: 'src',
     cssin: 'src/css/**/*.css',
     jsin: 'src/js/**/*.js',
-    imgin: 'src/img/**/*.{jpg,jpeg,png,gif}',
+    imgin: 'src/img/**/*.{jpg,jpeg,png,gif,svg}',
     htmlin: 'src/*.html',
     scssin: 'src/scss/**/*.scss',
     cssout: 'dist/css',
@@ -101,8 +101,6 @@ gulp.task('clean', () => {
     return del([config.dist]);
 });
 
-gulp.task('build', () => {
-    gulp.series('clean', gulp.parallel('html', 'js', 'css', 'img'));
-});
+gulp.task('build',  gulp.series('clean', gulp.parallel('html', 'js', 'css', 'img')));
 
 gulp.task('default', gulp.series('serve'));
