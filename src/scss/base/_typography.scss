@@ -10,3 +10,10 @@
 .bold {
     font-weight: 700;
 }
+
+.displayOnlyMobile {
+    display: block;
+    @include respond(tab-land) {
+        display: none;
+    }
+}

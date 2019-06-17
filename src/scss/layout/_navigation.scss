@@ -1,5 +1,93 @@
 .navigation {
+    &__btn {
+        width: 30px;
+        height: 30px;
+        @include respond(tab-land) {
+            display: none;
+        }
+        &--close {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            outline: none;
+            background-color: transparent;
+            border: none;
+            @include respond(tab-land) {
+                display: none;
+            }
+            &::before, &::after {
+                position: absolute;
+                left: 14px;
+                top: 0;
+                content: ' ';
+                height: 30px;
+                width: 2px;
+                background-color: $color-white;
+            }
+            &::before {
+                transform: rotate(45deg);
+            }
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
     &__list {
         list-style: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-y: auto;
+        background-color: $color-menu-bg;
+        padding-top: 20px;
+        opacity: 0;
+        display: none;
+        @include respond(tab-land) {
+            background-color: transparent;
+            position: static;
+            top: unset;
+            left: unset;
+            right: unset;
+            bottom: unset;
+            opacity: 1;
+            display: flex;
+            justify-content: space-between;
+        }
+        &--active {
+            opacity: 1;
+            display: block;
+        }
+    }
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: $color-white;
+        font-weight: 700;
+        padding: 15px 20px;
+        text-align: center;
+        outline: none;
+        @include respond(tab-land) {
+            color: $color-black;
+            padding: 0;
+        }
+        &:hover {
+            cursor: pointer;
+            background: rgba(255,248,213,0.1);
+            @include respond(tab-land) {
+                color: #ecc7d0;
+                background: transparent;
+            }
+        }
+        &--active {
+            color: #ecc7d0;
+            background: rgba(255,248,213,0.1);
+            @include respond(tab-land) {
+                background: transparent;
+            }
+        }
     }
 }
