@@ -1,9 +1,13 @@
+const navigationList = document.getElementById("navigation-list");
+
 document.getElementById("navigation-btn-open").onclick = function() {
-    document.getElementById("navigation-list").classList.add("navigation__list--active");
+    navigationList.classList.remove("navigation__list--hidden");
+    navigationList.classList.add("navigation__list--active");
 }
 
 document.getElementById("navigation-btn-close").onclick = function() {
-    document.getElementById("navigation-list").classList.remove("navigation__list--active");
+    navigationList.classList.remove("navigation__list--active");
+    navigationList.classList.add("navigation__list--hidden");
 }
 
 var navigation = document.getElementById("navigation-list");
@@ -13,6 +17,8 @@ for(var i=0; i<navigationItems.length; i++) {
         // navigationItems.classList.remove("navigation__link--active");
         removeActiveClass("navigation__link--active");
         this.classList.add("navigation__link--active");
+        navigationList.classList.remove("navigation__list--active");
+        navigationList.classList.add("navigation__list--hidden");
     })
 }
 
@@ -21,5 +27,3 @@ function removeActiveClass(activeClass) {
         navigationItems[j].classList.remove(activeClass);
     }
 }
-//
-

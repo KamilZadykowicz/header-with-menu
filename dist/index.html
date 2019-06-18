@@ -39,16 +39,24 @@
                 </div>
             </div>
             <nav class="navigation" id="navigation">
-                <ul class="navigation__list">
-                    <li>KATEGORIE</li>
-                    <li>NOWOŚCI</li>
-                    <li>PROMOCJE</li>
-                    <li>WYPRZEDAŻE</li>
-                    <li>KOLEKCJE SEZONY</li>
-                    <li>NASZA OFERTA</li>
-                    <li>TRENDY 2018</li>
-                    <li>BLOG</li>
-                    <li>KONTAKT</li>
+                <button class="navigation__btn" id="navigation-btn-open">
+                    <!-- <span></span>
+                    <span></span>
+                    <span></span> -->
+                </button>
+                <ul class="navigation__list" id="navigation-list">
+                    <li class="displayOnlyMobile">
+                        <button class="navigation__btn--close" id="navigation-btn-close"></button>
+                    </li>
+                    <li><a class="navigation__link" href="#">KATEGORIE</a></li>
+                    <li><a class="navigation__link" href="#">NOWOŚCI</a></li>
+                    <li><a class="navigation__link" href="#">PROMOCJE</a></li>
+                    <li><a class="navigation__link navigation__link--active" href="#">WYPRZEDAŻE</a></li>
+                    <li><a class="navigation__link" href="#">KOLEKCJE SEZONY</a></li>
+                    <li><a class="navigation__link" href="#">NASZA OFERTA</a></li>
+                    <li><a class="navigation__link" href="#">TRENDY 2018</a></li>
+                    <li><a class="navigation__link" href="#">BLOG</a></li>
+                    <li><a class="navigation__link" href="#">KONTAKT</a></li>
                 </ul>
             </nav>
         </div>
@@ -56,5 +64,6 @@
     <main>
 
     </main>
+    <script src="./js/script.js"></script>
 </body>
 </html>

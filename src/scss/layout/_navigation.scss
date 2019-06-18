@@ -2,21 +2,24 @@
     &__btn {
         width: 30px;
         height: 30px;
+        outline: none;
+        background-color: transparent;
+        border: none;
+        &:hover {
+            cursor: pointer;
+        }
         @include respond(tab-land) {
             display: none;
         }
+        &--open {
+            position: relative;
+            width: 20px;
+            height: 15px;
+        }
         &--close {
-            width: 30px;
-            height: 30px;
             position: absolute;
             right: 15px;
             top: 15px;
-            outline: none;
-            background-color: transparent;
-            border: none;
-            @include respond(tab-land) {
-                display: none;
-            }
             &::before, &::after {
                 position: absolute;
                 left: 14px;
@@ -32,6 +35,28 @@
             &::after {
                 transform: rotate(-45deg);
             }
+
+        }
+    }
+    &__btnOpenLine {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background: $color-black;
+        position: absolute;
+        left: 0;
+        border-radius: 1px;
+        &--top {
+            top: 0;
+        }
+        &--middle {
+            top: 50%;
+            transform: translateY(-50%);
+            width: 85%;
+        }
+        &--bottom {
+            bottom: 0;
+            width: 70%;
         }
     }
     &__list {
@@ -43,9 +68,10 @@
         bottom: 0;
         overflow-y: auto;
         background-color: $color-menu-bg;
-        padding-top: 20px;
+        padding-top: 40px;
         opacity: 0;
-        display: none;
+        visibility: hidden;
+        // display: none;
         @include respond(tab-land) {
             background-color: transparent;
             position: static;
@@ -58,8 +84,20 @@
             justify-content: space-between;
         }
         &--active {
+            // display: block;
             opacity: 1;
-            display: block;
+            visibility: visible;
+            animation: showMenu 0.5s ease-out;
+            // animation-fill-mode: forwards;
+            @include respond(tab-land) {
+                display: flex;
+            }
+        }
+        &--hidden {
+            opacity: 0;
+            visibility: visible;
+            animation: hideMenu 0.5s ease-out;
+            animation-fill-mode: forwards;
         }
     }
     &__link {
@@ -70,6 +108,9 @@
         padding: 15px 20px;
         text-align: center;
         outline: none;
+        transition: color 0.15s;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
         @include respond(tab-land) {
             color: $color-black;
             padding: 0;

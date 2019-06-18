@@ -32,18 +32,49 @@
         &::placeholder {
             color: #a3a2a2;
         }
+        &:focus {
+            outline: none;
+        }
         @include respond(phone-port) {
             width: 200px;
         }
         @include respond(phone-land) {
             width: 300px;
+            font-size: 12px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            padding-left: 7px;
+            padding-right: 30px;
         }
         @include respond(tab-port) {
             width: 400px;
         }
         @include respond(tab-land) {
             width: 480px;
+            font-size: 14px;
             margin-left: 100px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 35px;
+        }
+    }
+    &__box {
+        position: relative;
+    }
+    &__icon {
+        display: block;
+        width: 10px;
+        position: absolute;
+        top: 50%;
+        right: 4px;
+        transform: translateY(-50%);
+
+        @include respond(phone-land) {
+            width: 14px;
+        }
+        @include respond(tab-land) {
+            width: 16px;
         }
     }
 }

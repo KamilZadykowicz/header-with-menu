@@ -29,7 +29,10 @@
         <div class="container">
             <div class="headerbar">
                 <img class="headerbar__logo" src="./img/logo.png" alt="logo sklepu">
-                <input class="headerbar__input" placeholder="Co chcesz kupić?" type="text">
+                <div class="headerbar__box">
+                    <input class="headerbar__input" placeholder="Co chcesz kupić?" type="text">
+                    <img class="headerbar__icon" src="../img/search.svg" alt="lupa">
+                </div>
                 <div class="basket__wrap">
                     <div class="basket">
                         <img class="basket__img" src="./img/basket.png" alt="koszyk">
@@ -39,14 +42,14 @@
                 </div>
             </div>
             <nav class="navigation" id="navigation">
-                <button class="navigation__btn" id="navigation-btn-open">
-                    <!-- <span></span>
-                    <span></span>
-                    <span></span> -->
+                <button class="navigation__btn navigation__btn--open" id="navigation-btn-open">
+                    <span class="navigation__btnOpenLine navigation__btnOpenLine--top"></span>
+                    <span class="navigation__btnOpenLine navigation__btnOpenLine--middle"></span>
+                    <span class="navigation__btnOpenLine navigation__btnOpenLine--bottom"></span>
                 </button>
                 <ul class="navigation__list" id="navigation-list">
                     <li class="displayOnlyMobile">
-                        <button class="navigation__btn--close" id="navigation-btn-close"></button>
+                        <button class="navigation__btn navigation__btn--close" id="navigation-btn-close"></button>
                     </li>
                     <li><a class="navigation__link" href="#">KATEGORIE</a></li>
                     <li><a class="navigation__link" href="#">NOWOŚCI</a></li>
