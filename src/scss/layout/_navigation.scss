@@ -71,8 +71,10 @@
         padding-top: 40px;
         opacity: 0;
         visibility: hidden;
+        font-size: 16px;
         // display: none;
         @include respond(tab-land) {
+            padding-top: 0;
             visibility: visible;
             background-color: transparent;
             position: static;
@@ -84,6 +86,7 @@
             display: flex;
             justify-content: space-between;
             transform: translateY(0);
+            font-size: 14px;
         }
         &--active {
             // display: block;

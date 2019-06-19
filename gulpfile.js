@@ -4,7 +4,7 @@ const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
-const uglify = require('gulp-uglify');
+// const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const imagemin = require('gulp-imagemin');
 const changed = require('gulp-changed');
@@ -72,7 +72,7 @@ gulp.task('css', () => {
 gulp.task('js', () => {
     return gulp.src(config.jsin)
     .pipe(concat(config.jsoutname))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest(config.jsout));
 });
 
