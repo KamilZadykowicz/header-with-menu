@@ -27,3 +27,14 @@ function removeActiveClass(activeClass) {
         navigationItems[j].classList.remove(activeClass);
     }
 }
+
+const basketDrop = document.getElementById("basketDrop");
+const basketBtn = document.getElementById("basketBtn");
+
+basketBtn.onclick = function() {
+    basketDrop.classList.toggle("basketDrop--show");
+}
+
+basketDrop.onmouseleave = function() {
+    basketDrop.classList.remove("basketDrop--show")
+}

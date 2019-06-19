@@ -30,18 +30,60 @@
             <div class="headerbar">
                 <img class="headerbar__logo" src="./img/logo.svg" alt="logo sklepu">
                 <div class="headerbar__box">
-                    <input class="headerbar__input" placeholder=" " type="text">
-                    <span class="headerbar__label">Co chcesz kupić?</span>
-                    <div class="headerbar__inputBorder"></div>
-                    <img class="headerbar__icon" src="./img/search.svg" alt="lupa">
+                    <form action="#">
+                        <input class="headerbar__input" placeholder=" " type="text">
+                        <span class="headerbar__label">Co chcesz kupić?</span>
+                        <div class="headerbar__inputBorder"></div>
+                        <img class="headerbar__icon" src="./img/search.svg" alt="lupa">
+                    </form>
                 </div>
-                <div class="basket__wrap">
-                    <div class="basket">
-                        <img class="basket__img" src="./img/basket.svg" alt="koszyk">
-                        <span class="basket__qty">2</span>
+                <div class="basket__wrap" id="basketWrap">
+                    <div class="basket__btn" id="basketBtn">
+                    	<div class="basket">
+                    	    <img class="basket__img" src="./img/basket.svg" alt="koszyk">
+                    	    <span class="basket__qty">2</span>
+                    	</div>
+                    	<p class="basket__text bold">Twój koszyk</p>
                     </div>
-                    <p class="basket__text bold">Twój koszyk</p>
-                    <div class="basketDrop">
+                    <div class="basketDrop" id="basketDrop">
+                        <p class="basketDrop__qty">Produkty w koszyku: <span class="bold">2</span></p>
+                        <p class="basketDrop__total">Kwota do zapłaty: <span class="basketDrop__total--price bold">207.00 zł</span></p>
+                        <div class="basketDrop__line"></div>
+                        <div class="basketDropItem">
+                            <img src="./img/thumb-prod1.jpg" alt="produkt" class="basketDropItem__img">
+                            <div class="basketDropItem__description">
+                                <p class="basketDropItem__title">biustonosz push-up line mos 12</p>
+                                <p class="basketDropItem__price bold">59.00 zł</p>
+                                <div class="basketDropItem__flexwrap">
+                                    <div class="basketDropItem__qty">
+                                        <p class="basketDropItem__label">Ilość:</p>
+                                        <span class="basketDropItem__qtyNumber">1</span>
+                                    </div>
+                                    <div class="basketDropItem__icons">
+                                        <img class="basketDropItem__icon" src="./img/lock.svg" alt="">
+                                        <img class="basketDropItem__icon" src="./img/lock.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basketDropItem">
+                            <img src="./img/thumb-prod2.jpg" alt="produkt" class="basketDropItem__img">
+                            <div class="basketDropItem__description">
+                                <p class="basketDropItem__title">biustonosz push-up line RE 6</p>
+                                <p class="basketDropItem__price bold">79.00 zł</p>
+                                <div class="basketDropItem__flexwrap">
+                                    <div class="basketDropItem__qty">
+                                        <p class="basketDropItem__label">Ilość:</p>
+                                        <span class="basketDropItem__qtyNumber">2</span>
+                                    </div>
+                                    <div class="basketDropItem__icons">
+                                        <img class="basketDropItem__icon" src="./img/lock.svg" alt="">
+                                        <img class="basketDropItem__icon" src="./img/lock.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basketDrop__line"></div>
                         <button class="basketDrop__btn">Zobacz koszyk</button>
                     </div>
                 </div>

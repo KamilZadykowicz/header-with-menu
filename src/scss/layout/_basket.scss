@@ -2,9 +2,11 @@
     margin-right: 4px;
     position: relative;
     &__wrap {
+        position: relative;
+    }
+    &__btn {
         display: flex;
         align-items: flex-start;
-        position: relative;
         &:hover {
             cursor: pointer;
         }
@@ -67,12 +69,39 @@
     padding: 20px 10px;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     z-index: 2;
-    max-width: 100vw;
+    min-width: 300px;
+    max-width: 80vw;
     position: absolute;
-    right: 0;
+    // right: 0;
+    right: -30px;
     top: 50px;
+    transform: scale(0);
+    transform-origin: 100% 0;
+    transition: transform 0.3s;
+    &--show {
+        transform: scale(1);
+    }
+    &--hide {
+        transform: scale(0);
+    }
     &:hover {
         cursor: default;
+    }
+    &__qty {
+        font-size: 12px;
+        margin-bottom: 0.5em;
+    }
+    &__total {
+        font-size: 14px;
+        margin-bottom: 0.5em;
+        &--price {
+            font-size: 120%;
+        }
+    }
+    &__line {
+        width: 100%;
+        height: 1px;
+        background: $color-basket-line;
     }
     &__btn {
         background: $color-button;
@@ -86,6 +115,67 @@
         white-space: nowrap;
         padding: 10px 20px;
         outline: none;
+        margin-top: 20px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.basketDropItem {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    &__img {
+        width: 20%;
+        flex-shrink: 0;
+        margin-right: 10px;
+    }
+    &__description {
+        width: 80%;
+    }
+    &__title {
+        font-size: 11px;
+        text-transform: uppercase;
+        margin-bottom: 0.5em;
+    }
+    &__price {
+        font-size: 14px;
+        margin-bottom: 0.5em;
+    }
+    &__flexwrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+    }
+    &__qty {
+        display: flex;
+        align-items: flex-end;
+    }
+    &__label {
+        font-size: 12px;
+        margin-right: 10px;;
+    }
+    &__qtyNumber {
+        font-size: 12px;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        border: 1px solid $color-basket-line;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__icons {
+
+    }
+    &__icon {
+        width: 14px;
+        margin-left: 6px;
+        display: inline-block;
         &:hover {
             cursor: pointer;
         }

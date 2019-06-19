@@ -69,10 +69,11 @@
         bottom: 0;
         overflow-y: auto;
         background-color: $color-menu-bg;
-        padding-top: 40px;
+        padding-top: 50px;
         opacity: 0;
         visibility: hidden;
         font-size: 16px;
+        z-index: 99;
         // display: none;
         @include respond(tab-land) {
             padding-top: 0;
@@ -121,6 +122,7 @@
         transition: color 0.15s;
         user-select: none;
         -webkit-tap-highlight-color: transparent;
+        text-transform: uppercase;
         @include respond(tab-land) {
             color: $color-black;
             padding: 0;
