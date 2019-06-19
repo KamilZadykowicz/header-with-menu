@@ -10,6 +10,9 @@
     &__logo {
         width: 20%;
         flex-shrink: 0;
+        &:hover {
+            cursor: pointer;
+        }
         @include respond(phone-land) {
             width: 100px;
         }
@@ -23,15 +26,13 @@
     &__inputBorder {
         width: 100%;
         height: 1px;
-        background: $color-input-border;
-        // background: blue;
-        transition: 0.1s all;
+        background: $color-borders;
         position: absolute;
         bottom: 0;
         left: 0;
         transform: scaleX(0);
         transform-origin: 0 0;
-        transition: all .5s ease;
+        transition: all .3s ease;
     }
     &__input {
         width: 150px;
@@ -131,6 +132,9 @@
     &__wrap {
         display: flex;
         align-items: flex-start;
+        &:hover {
+            cursor: pointer;
+        }
     }
     &__img {
         width: 20px;
@@ -143,8 +147,13 @@
     }
     &__text {
         font-size: 10px;
+        display: none;
+        &::selection {
+            background: transparent;
+        }
         @include respond(phone-land) {
             font-size: 12px;
+            display: block;
         }
         @include respond(tab-land) {
             font-size: 14px;
@@ -164,6 +173,9 @@
         position: absolute;
         right: -5px;
         bottom: -5px;
+        &::selection {
+            background: transparent;
+        }
         @include respond(phone-land) {
             font-size: 10px;
             width: 18px;

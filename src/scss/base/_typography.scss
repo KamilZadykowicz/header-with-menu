@@ -5,6 +5,12 @@
     @include respond(tab-land) {
         max-width: 1240px;
     }
+    &--topBar {
+        padding-right: 0;
+        @include respond(phone-land) {
+            padding-right: 15px;
+        }
+    }
 }
 
 .bold {

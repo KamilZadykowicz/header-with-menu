@@ -15,6 +15,7 @@
             position: relative;
             width: 20px;
             height: 15px;
+            align-self: flex-start;
         }
         &--close {
             position: absolute;
@@ -44,15 +45,15 @@
         width: 100%;
         background: $color-black;
         position: absolute;
-        left: 0;
-        border-radius: 1px;
+        right: 0;
+        // border-radius: 1px;
         &--top {
             top: 0;
         }
         &--middle {
             top: 50%;
             transform: translateY(-50%);
-            width: 85%;
+            width: 100%;
         }
         &--bottom {
             bottom: 0;
