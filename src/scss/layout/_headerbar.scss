@@ -94,6 +94,9 @@
         transition: 0.2s ease-out all;
         font-size: 10px;
         z-index: -1;
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            transform: translateY(-180%) scale(0.75);
+         }
         @include respond(phone-land) {
             left: 7px;
         }

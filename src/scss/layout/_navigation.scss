@@ -89,6 +89,7 @@
             justify-content: space-between;
             transform: translateY(0);
             font-size: 14px;
+            z-index: 1;
         }
         &--active {
             // display: block;
