@@ -3,6 +3,8 @@ const basketDrop = document.getElementById("basketDrop");
 const basketBtn = document.getElementById("basketBtn");
 const headerInput = document.getElementById("headerInput");
 const headerLabel = document.getElementById("headerLabel");
+const navigation = document.getElementById("navigation-list");
+const navigationItems = navigation.getElementsByClassName("navigation__link");
 var hideBasketTimeout;
 
 document.getElementById("navigation-btn-open").onclick = function() {
@@ -15,9 +17,7 @@ document.getElementById("navigation-btn-close").onclick = function() {
     navigationList.classList.add("navigation__list--hidden");
 }
 
-var navigation = document.getElementById("navigation-list");
-var navigationItems = navigation.getElementsByClassName("navigation__link");
-for(var i=0; i<navigationItems.length; i++) {
+for(let i=0; i<navigationItems.length; i++) {
     navigationItems[i].addEventListener("click", function() {
         removeActiveClass("navigation__link--active");
         this.classList.add("navigation__link--active");
@@ -27,7 +27,7 @@ for(var i=0; i<navigationItems.length; i++) {
 }
 
 function removeActiveClass(activeClass) {
-    for (var j = 0; j < navigationItems.length; j++) {
+    for (let j = 0; j < navigationItems.length; j++) {
         navigationItems[j].classList.remove(activeClass);
     }
 }

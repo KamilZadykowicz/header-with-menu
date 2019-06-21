@@ -5,7 +5,7 @@
     padding-top: 20px;
     margin-bottom: 20px;
     @include respond(tab-land) {
-        margin-bottom: 40px;
+        margin-bottom: 60px;
     }
     &__logo {
         width: 20%;
@@ -35,6 +35,7 @@
         transition: all .3s ease;
     }
     &__input {
+        font-family: Helvetica, Arial, sans-serif;
         width: 150px;
         border: none;
         border-bottom: 1px solid #191919;
@@ -57,10 +58,6 @@
                 }
             }
         }
-        // &:not(:placeholder-shown) + .headerbar__label {
-        //     transform: translateY(-180%) scale(0.75);
-        //     color: lighten(#a3a2a2,10%);
-        // }
         @include respond(phone-port) {
             width: 200px;
         }
@@ -85,6 +82,7 @@
         }
     }
     &__label {
+        font-family: Helvetica, Arial, sans-serif;
         color: #a3a2a2;
         position: absolute;
         top: 50%;
@@ -94,9 +92,6 @@
         transition: 0.2s ease-out all;
         font-size: 10px;
         z-index: -1;
-        // @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        //     transform: translateY(-180%) scale(0.75);
-        // }
         @include respond(phone-land) {
             left: 7px;
         }

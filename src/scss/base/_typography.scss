@@ -2,6 +2,15 @@
     padding: 0 15px;
     margin-left: auto;
     margin-right: auto;
+    @include respond(phone-port) {
+        max-width: 540px;
+    }
+    @include respond(phone-land) {
+        max-width: 720px;
+    }
+    @include respond(tab-port) {
+        max-width: 960px;
+    }
     @include respond(tab-land) {
         max-width: 1240px;
     }
