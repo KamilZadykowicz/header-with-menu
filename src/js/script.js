@@ -3,6 +3,7 @@ const basketDrop = document.getElementById("basketDrop");
 const basketBtn = document.getElementById("basketBtn");
 const headerInput = document.getElementById("headerInput");
 const headerLabel = document.getElementById("headerLabel");
+var hideBasketTimeout;
 
 document.getElementById("navigation-btn-open").onclick = function() {
     navigationList.classList.remove("navigation__list--hidden");
@@ -18,7 +19,6 @@ var navigation = document.getElementById("navigation-list");
 var navigationItems = navigation.getElementsByClassName("navigation__link");
 for(var i=0; i<navigationItems.length; i++) {
     navigationItems[i].addEventListener("click", function() {
-        // navigationItems.classList.remove("navigation__link--active");
         removeActiveClass("navigation__link--active");
         this.classList.add("navigation__link--active");
         navigationList.classList.remove("navigation__list--active");
@@ -37,7 +37,12 @@ basketBtn.onclick = function() {
 }
 
 basketDrop.onmouseleave = function() {
-    basketDrop.classList.remove("basketDrop--show")
+    hideBasketTimeout = setTimeout(function(){
+        basketDrop.classList.remove("basketDrop--show")
+    },1000)
+}
+basketDrop.onmouseover = function() {
+    clearTimeout(hideBasketTimeout);
 }
 
 function isInputEmpty() {
