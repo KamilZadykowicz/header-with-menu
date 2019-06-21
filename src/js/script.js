@@ -1,4 +1,8 @@
 const navigationList = document.getElementById("navigation-list");
+const basketDrop = document.getElementById("basketDrop");
+const basketBtn = document.getElementById("basketBtn");
+const headerInput = document.getElementById("headerInput");
+const headerLabel = document.getElementById("headerLabel");
 
 document.getElementById("navigation-btn-open").onclick = function() {
     navigationList.classList.remove("navigation__list--hidden");
@@ -28,13 +32,23 @@ function removeActiveClass(activeClass) {
     }
 }
 
-const basketDrop = document.getElementById("basketDrop");
-const basketBtn = document.getElementById("basketBtn");
-
 basketBtn.onclick = function() {
     basketDrop.classList.toggle("basketDrop--show");
 }
 
 basketDrop.onmouseleave = function() {
     basketDrop.classList.remove("basketDrop--show")
+}
+
+function isInputEmpty() {
+    if(headerInput.value == "") {
+        headerLabel.classList.remove("headerbar__label--move");
+    }
+    else {
+        headerLabel.classList.add("headerbar__label--move");
+    }
+}
+
+headerInput.onchange = function() {
+    isInputEmpty();
 }
